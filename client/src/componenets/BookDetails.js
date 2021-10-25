@@ -9,7 +9,8 @@ function BookDetails({ bookId }) {
   });
 
   const displayBookDetails = () => {
-    if (data == null) return;
+    if (loading) return <div>Loading...</div>;
+    if (error) return <div>Error: (</div>;
   
     const { book } = data;
     if (book) {
