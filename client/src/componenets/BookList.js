@@ -16,11 +16,7 @@ function BookList() {
     if (loading) return <p>Loading books...</p>;
     if (error) return <p>Error :(</p>;
   
-    return data.books.map(book => {
-      return(
-        <li key={book.id}>{ book.name }</li>
-      );
-    });
+    return data.books.map(book => <li key={book.id}>{ book.name }</li>);
   }
 
   return (
