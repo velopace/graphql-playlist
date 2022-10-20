@@ -10,7 +10,7 @@ import AddBook from "./componenets/AddBook";
 
 // apollo client setup
 const client = new ApolloClient({
-  uri: 'http://localhost:4000/graphql',
+  uri: `${process.env.REACT_APP_API_BASE_URL}/graphql`,
   cache: new InMemoryCache()
 });
 
