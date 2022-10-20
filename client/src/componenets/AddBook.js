@@ -12,7 +12,7 @@ function AddBook() {
     error: authorsError,
     data: authorsData
   } = useQuery(getAuthorsQuery);
-  const [addBook, { data, loading, error }] = useMutation(addBookMutation);
+  const [addBook] = useMutation(addBookMutation);
 
   const submitForm = (e) => {
     e.preventDefault();
